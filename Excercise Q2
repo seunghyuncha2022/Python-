@@ -1,16 +1,16 @@
-N = input() #26
-flag = 0
-N = int(N)
-initial_N = N #26
-while True:
+N = input() # 예를 들면 26
+flag = 0    # cycle 횟수용
+N = int(N)  # 변환
+initial_N = N # 26
+while True: # 조건이 만족할 때까지 무한반복
     ten = N//10 # 2
     one = N % 10 # 6
     total = ten + one # 8
     right = total % 10 # 우측 숫자
     left = one # 좌측 숫자
-    new = left*10 + right
-    N = new
-    flag = flag + 1
-    if new == initial_N:
-        print(f'{N}, {flag}')
-        break
+    new = left*10 + right # 새 숫자
+    N = new # 최신화
+    flag = flag + 1 # cycle 횟수 +1
+    if new == initial_N: # 만약 새 숫자가 맨처음 입력값 N과 같다면
+        print(f'{N}, {flag}') # 출력하고
+        break                 # 루프 탈출
